@@ -3,10 +3,10 @@ function onRequest(info, tab) {
 //do something with the selection
 if(selection){
 	var serviceCall = 'https://www.google.com/search?q=' + encodeURIComponent(selection);
-	chrome.tabs.create({url: serviceCall});
+	browser.tabs.create({url: serviceCall});
 }
 };
-chrome.contextMenus.create({
+browser.contextMenus.create({
 	id: "word_search",
 	contexts: ["selection"],
 	title: "Search web for word",
