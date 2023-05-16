@@ -7,6 +7,6 @@
 		"contextMenus"
 	],
 	"background": {
-		"scripts": ["wordsearch.js"]
+		"service_worker": ["wordsearch.js"]
 	}
 }
