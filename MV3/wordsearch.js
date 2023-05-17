@@ -1,14 +1,17 @@
-function onRequest(info, tab) {
-	var selection = info.selectionText;
-//do something with the selection
-if(selection){
-	var serviceCall = 'https://www.google.com/search?q=' + encodeURIComponent(selection);
-	browser.tabs.create({url: serviceCall});
+function searchWithDuckDuckGo(info, tab) {
+  const searchText = info.selectionText;
+  const searchUrl = `https://duckduckgo.com/?q=${encodeURIComponent(searchText)}`;
+  browser.tabs.create({ url: searchUrl });
 }
-};
+
 browser.contextMenus.create({
-	id: "word_search",
-	contexts: ["selection"],
-	title: "Search web for word",
-	"onclick" : onRequest
+  id: "search-with-duckduckgo",
+  title: "Search with DuckDuckGo",
+  contexts: ["selection"]
+});
+
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "search-with-duckduckgo") {
+    searchWithDuckDuckGo(info, tab);
+  }
 });
