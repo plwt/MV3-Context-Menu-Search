@@ -7,6 +7,6 @@
   },
   "permissions": ["contextMenus", "tabs"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "wordsearch.js"
   }
 }
