@@ -6,9 +6,9 @@
 		"activeTab",
 		"contextMenus"
 	],
-
 	"background": {
-		"scripts": ["wordsearch.js"]
+		"scripts": [
+			"wordsearch.js"
+		]
 	}
-
 }
