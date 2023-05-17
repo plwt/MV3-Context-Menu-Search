@@ -1,12 +1,12 @@
 {
-	"manifest_version": 3,
-	"name": "Context menu word search",
-	"version": "0.1",
-	"permissions": [
-		"activeTab",
-		"contextMenus"
-	],
-	"background": {
-		"service_worker": "wordsearch.js"
-	}
+  "manifest_version": 3,
+  "name": "DuckDuckGo Context Menu Search",
+  "version": "1.0",
+  "description": "Search selected text using DuckDuckGo from the context menu",
+  
+  },
+  "permissions": ["contextMenus", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
